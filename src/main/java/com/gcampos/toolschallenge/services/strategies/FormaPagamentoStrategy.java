@@ -5,7 +5,7 @@ import com.gcampos.toolschallenge.models.enums.StatusTransacaoEnum;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
-import static com.gcampos.toolschallenge.util.RandomUtil.gerarIdNumeros;
+import static com.gcampos.toolschallenge.utils.RandomUtil.gerarIdNumeros;
 
 @Component
 @Log4j2

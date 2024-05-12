@@ -1,4 +1,4 @@
-package com.gcampos.toolschallenge.util;
+package com.gcampos.toolschallenge.utils;
 
 import java.util.UUID;
 
