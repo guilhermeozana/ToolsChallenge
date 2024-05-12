@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "34c53cae-0b73-4d23-87c4-56d3b1a6b598",
+		"name": "Pagamentos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Realizar Pagamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transacao\": {\r\n        \"cartao\": \"5500000000000004\",\r\n        \"descricao\": {\r\n            \"valor\": \"101.00\",\r\n            \"dataHora\": \"01/05/2021 18:38:00\",\r\n            \"estabelecimento\": \"PetShop Mundo cão\"\r\n        },\r\n        \"formaPagamento\": {\r\n            \"tipo\": \"PARCELADO_LOJA\",\r\n            \"parcelas\": \"1\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pagamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pagamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pagamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Pagamento Por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pagamentos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagamentos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar Estorno de Pagamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pagamentos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagamentos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Estornos de Pagamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pagamentos/estornos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagamentos",
+						"estornos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Estornos de Pagamentos Por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pagamentos/estornos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagamentos",
+						"estornos",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
