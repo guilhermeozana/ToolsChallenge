@@ -9,14 +9,18 @@ import org.springframework.stereotype.Component;
 public class PagamentoParceladoEmissorStrategy extends FormaPagamentoStrategy {
     @Override
     public Pagamento processarPagamento(Pagamento pagamento) {
-        log.info("Processando Pagamento A Vista com ID de Transação: " + pagamento.getTransacao().getId());
+        log.info("Processando Pagamento Parcelado Emissor com ID de Transação: " + pagamento.getTransacao().getId());
+
+        //Aqui viriam as regras de negócio referentes ao pagamento Parcelado Emissor
 
         return realizarTransacao(pagamento);
     }
 
     @Override
     public Pagamento processarEstornoPagamento(Pagamento pagamento) {
-        log.info("Processando Estorno de Pagamento A Vista com ID de Transação: " + pagamento.getTransacao().getId());
+        log.info("Processando Estorno de Pagamento Parcelado Emissor com ID de Transação: " + pagamento.getTransacao().getId());
+
+        //Aqui viriam as regras de negócio referentes ao estorno de pagamento Parcelado Emissor
 
         return realizarEstorno(pagamento);
     }

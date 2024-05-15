@@ -10,14 +10,18 @@ public class PagamentoAVistaStrategy extends FormaPagamentoStrategy {
 
     @Override
     public Pagamento processarPagamento(Pagamento pagamento) {
-        log.info("Processando Pagamento A Vista com ID de Transação: " + pagamento.getTransacao().getId());
+        log.info("Processando Pagamento À Vista com ID de Transação: " + pagamento.getTransacao().getId());
+
+        //Aqui viriam as regras de negócio referentes ao pagamento à vista
 
         return realizarTransacao(pagamento);
     }
 
     @Override
     public Pagamento processarEstornoPagamento(Pagamento pagamento) {
-        log.info("Processando Estorno de Pagamento A Vista com ID de Transação: " + pagamento.getTransacao().getId());
+        log.info("Processando Estorno de Pagamento À Vista com ID de Transação: " + pagamento.getTransacao().getId());
+
+        //Aqui viriam as regras de negócio referentes ao estorno de pagamento à vista
 
         return realizarEstorno(pagamento);
     }
