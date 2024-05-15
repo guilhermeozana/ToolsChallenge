@@ -12,16 +12,16 @@ O sistema permite realizar operações referentes a pagamentos como processar e 
 Para executar a API em seu ambiente local, siga as instruções abaixo:
 
 1. **Clone o Repositório**:  
-    - git clone https://github.com/guilhermeozana/toolschallenge.git
+    - git clone https://github.com/guilhermeozana/ToolsChallenge.git
 
 2. **Navegue até o Diretório do Projeto**: 
-    - cd toolschallenge
+    - cd ToolsChallenge
 
 3. **Build do Projeto**:
     - mvn clean install
 
 4. **Execute a Aplicação**: 
-    - java -jar target/toolschallenge.jar  
+    - java -jar target/toolschallenge-1.0.jar  
 
 5. **Acesso à API**: 
     - A API estará disponível em http://localhost:8080. Todos os endpoints podem ser visualizados em http://localhost:8080/swagger-ui/index.html.
